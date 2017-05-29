@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Slide from './Slide';
+import starryBg from '../starry-bg';
 
 const { max, min, abs } = Math;
 
@@ -87,19 +88,49 @@ export default class Presentation extends Component {
     return (
       <div
         className="root"
-        style={{
-          opacity: goingBack ? 0.5 : 1,
-        }}
         onMouseDown={this.onMouseDown}
         onMouseUp={this.onMouseUp}
       >
-        <Slide {...slide} />
+        <div
+          className="stars"
+          style={{
+            backgroundImage: `url(${starryBg})`,
+          }}
+        />
+        <div
+          style={{
+            opacity: goingBack ? 0.5 : 1,
+          }}
+        >
+          <Slide {...slide} />
+        </div>
         <style jsx>{`
           .root {
             position: absolute;
             width: 100%;
             height: 100%;
             user-select: none;
+            background: #081b29;
+            overflow: hidden;
+          }
+          .stars {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 300%;
+            height: 300%;
+            min-width: 4000px;
+            min-height: 2750px;
+            background-position: center center;
+            animation: stars-ani 200s linear infinite;
+          }
+          @keyframes stars-ani {
+            0% {
+              transform: translateY(0) translateX(0);
+            }
+            100% {
+              transform: translateY(1372px) translateX(2000px);
+            }
           }
         `}</style>
       </div>
