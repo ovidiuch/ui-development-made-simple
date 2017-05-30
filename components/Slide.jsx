@@ -22,27 +22,24 @@ export default class Slide extends Component {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 384px;
-            height: 384px;
+            height: 192px;
             box-sizing: border-box;
-            padding-top: 8px;
+            padding: 8px 32px 0 32px;
             background-color: rgba(255, 255, 255, 0.85);
             box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
-            border-radius: 24px;
-            color: @text-color;
-            font-size: 256px;
+            border-radius: 12px;
+            color: #101112;
+            font-size: 128px;
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-weight: bold;
+            line-height: 192px;
             text-align: center;
-            line-height: 384px;
             white-space: nowrap;
           }
-          @media (-webkit-min-device-pixel-ratio: 2) {
+          @media (-webkit-max-device-pixel-ratio: 1) {
             .content {
-              width: 192px;
-              height: 192px;
-              font-size: 128px;
-              line-height: 192px;
-              border-radius: 12px;
+              /* Emojis render up to 256px on normal screens and 128px on retina */
+              transform: translate(-50%, -50%) scale(2);
             }
           }
         `}</style>

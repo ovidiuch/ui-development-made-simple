@@ -1,5 +1,5 @@
 export default {
   props: {
-    content: 'O📹',
+    content: '🤔',
   },
 };

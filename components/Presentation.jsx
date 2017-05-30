@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Slide from './Slide';
 import starryBg from '../starry-bg';
+import slides from '../slides';
 
 const { max, min, abs } = Math;
 
@@ -19,6 +20,7 @@ export default class Presentation extends Component {
 
     this.state = {
       slide: 0,
+      goingBack: false,
     };
   }
 
@@ -37,8 +39,6 @@ export default class Presentation extends Component {
   }
 
   next() {
-    const { slides } = this.props;
-
     this.setState(({ slide }) => ({
       slide: min(slide + 1, slides.length - 1),
     }));
@@ -77,7 +77,6 @@ export default class Presentation extends Component {
   };
 
   render() {
-    const { slides } = this.props;
     const { slide: slideIndex, goingBack } = this.state;
     const slide = slides[slideIndex];
 
