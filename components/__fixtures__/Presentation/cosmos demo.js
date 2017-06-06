@@ -1,5 +1,5 @@
 export default {
   state: {
-    slide: 25,
+    slide: 22,
   },
 };

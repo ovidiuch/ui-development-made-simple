@@ -3,9 +3,6 @@ export default [
     content: 'O📹',
   },
   {
-    content: '🏞️',
-  },
-  {
     content: '🤔',
   },
   {
@@ -21,7 +18,7 @@ export default [
     content: '💔',
   },
   {
-    content: '🤕',
+    content: '📉',
   },
   {
     content: '💡',
@@ -45,9 +42,6 @@ export default [
     content: '🔑',
   },
   {
-    content: '🍁',
-  },
-  {
     content: '👂',
   },
   {
@@ -55,9 +49,6 @@ export default [
   },
   {
     content: '🚧',
-  },
-  {
-    content: '🚨',
   },
   {
     content: '🙈',
@@ -72,28 +63,25 @@ export default [
     content: '⚛️',
   },
   {
-    content: '🔍',
+    content: '🎪',
   },
   {
     content: '🎩'
   },
   {
-    content: '🚪‍',
-  },
-  {
     content: '🔫‍',
   },
   {
-    content: '🤡',
-  },
-  {
-    content: '😧',
+    content: '😰',
   },
   {
     content: '✌️',
   },
   {
     content: '👯',
+  },
+  {
+    content: '🐣'
   },
   {
     content: '👋',
