@@ -1,6 +1,6 @@
 # UI development made simple
 
-A talk on how to build a scalable UI architecture
+My JSHeroes talk on how to build a scalable UI architecture
 
 
 ```bash
