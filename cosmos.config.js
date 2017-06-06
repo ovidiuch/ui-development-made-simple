@@ -1,3 +1,4 @@
 export default {
-  componentPaths: ['components']
+  componentPaths: ['components'],
+  outputPath: 'docs'
 }
