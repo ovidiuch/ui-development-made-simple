@@ -85,5 +85,6 @@ export default [
   },
   {
     content: '👋',
+    credits: true
   },
 ];
