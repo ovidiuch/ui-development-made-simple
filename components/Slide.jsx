@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { string } from 'prop-types';
-import { emojify } from 'react-emojione';
 import Presentation from './Presentation';
 
 export default class Slide extends Component {
@@ -9,7 +8,7 @@ export default class Slide extends Component {
     return (
       <div className="root">
         <div className="content">
-          {emojify(content, { output: 'unicode' })}
+          {content}
         </div>
         <style jsx>{`
           .root {
