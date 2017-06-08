@@ -5,9 +5,14 @@ import Presentation from './Presentation';
 export default class Slide extends Component {
   render() {
     const { content, credits } = this.props;
+    const isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') !== -1;
+    const scale = isChrome ? 1 : 1.5;
+
     return (
       <div className="root">
-        <div className="content box">
+        <div className="content box" style={{
+          transform: `translate(-50%, -50%) scale(${scale})`
+        }}>
           {content}
         </div>
         {credits && (
@@ -34,7 +39,6 @@ export default class Slide extends Component {
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%) scale(1);
             height: 192px;
             padding: 8px 32px 0 32px;
             color: #101112;
