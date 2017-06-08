@@ -7,6 +7,8 @@ const { max, min, abs } = Math;
 
 const LEFT = 37;
 const RIGHT = 39;
+const PAGE_UP = 33;
+const PAGE_DOWN = 34;
 
 // Use `keydown` for debugging and `keyup` when presenting!
 const KEY_EVENT = 'keydown';
@@ -47,9 +49,11 @@ export default class Presentation extends Component {
   onKeyPress = e => {
     switch (e.keyCode) {
       case LEFT:
+      case PAGE_UP:
         this.prev();
         break;
       case RIGHT:
+      case PAGE_DOWN:
         this.next();
         break;
       default:
